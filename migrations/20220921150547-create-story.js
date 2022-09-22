@@ -20,7 +20,10 @@ module.exports = {
       },
       spaceId: {
         type: Sequelize.INTEGER,
+        references: { model: "spaces", key: "id" },
         allowNull: false,
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
       },
       createdAt: {
         allowNull: false,
