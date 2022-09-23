@@ -22,7 +22,7 @@ app.use(express.json());
 
 //routes
 app.use("/auth", authRouter);
-app.use(spaceRouter);
+app.use("/spaces", spaceRouter);
 
 //start listening
 app.listen(PORT, () => {
